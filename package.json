@@ -6,7 +6,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "author": "Henrique Sebastião <contato@henriquesebastiao.com>",
   "scripts": {
-    "format": "npx prettier . --write"
+    "format": "npx prettier . --write",
+    "lint": "npx prettier . --check"
   },
   "repository": {
     "type": "git",

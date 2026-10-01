@@ -1,19 +1,17 @@
-name: autofix.ci
+name: Lint
 
 on:
   pull_request:
   push:
 
-permissions: {}
 jobs:
   prettier:
+    name: Prettier
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - run: |
-          yarn
-          yarn prettier . --write
-      - uses: autofix-ci/action@v1
-        with:
-          commit-message: "ci(format): Apply prettier format"
+      - name: Install dependencies
+        run: yarn
+      - name: Check formatting with Prettier
+        run: yarn prettier . --check
