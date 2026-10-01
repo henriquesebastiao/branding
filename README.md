@@ -10,16 +10,16 @@ Sem etapa de build e sem dependências: os arquivos deste repositório são os a
 
 ## Arquivos
 
-| Arquivo | O que é |
-|---|---|
-| `tokens.css` | **Fonte única** dos valores: paleta crua (primitivos) e nomes por função (semânticos), como custom properties `--hs-*`. |
-| `base.css` | Estilos globais mínimos (fundo, texto, títulos, foco visível, movimento reduzido) dentro de `@layer base`. |
-| `tailwind.css` | Importa os dois acima e mapeia os tokens para o tema do Tailwind 4 (`bg-page`, `text-ink`, `rounded-card`...). |
-| `fonts.mjs` (+ `fonts.d.mts`, tipos) | Famílias e pesos para a API de fontes do Astro. Fonte única das fontes. |
-| `components/Head.astro` | Parte comum do `<head>`. |
-| `data/profile.ts` | Nome, e-mail, redes e endereços dos sites. |
-| `assets/` | Foto (`avatar.jpg`) e ícones (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`). |
-| `scripts/check-local.mjs` | Impede commitar o site apontando para uma cópia local do pacote. |
+| Arquivo                              | O que é                                                                                                                 |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| `tokens.css`                         | **Fonte única** dos valores: paleta crua (primitivos) e nomes por função (semânticos), como custom properties `--hs-*`. |
+| `base.css`                           | Estilos globais mínimos (fundo, texto, títulos, foco visível, movimento reduzido) dentro de `@layer base`.              |
+| `tailwind.css`                       | Importa os dois acima e mapeia os tokens para o tema do Tailwind 4 (`bg-page`, `text-ink`, `rounded-card`...).          |
+| `fonts.mjs` (+ `fonts.d.mts`, tipos) | Famílias e pesos para a API de fontes do Astro. Fonte única das fontes.                                                 |
+| `components/Head.astro`              | Parte comum do `<head>`.                                                                                                |
+| `data/profile.ts`                    | Nome, e-mail, redes e endereços dos sites.                                                                              |
+| `assets/`                            | Foto (`avatar.jpg`) e ícones (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`).                                    |
+| `scripts/check-local.mjs`            | Impede commitar o site apontando para uma cópia local do pacote.                                                        |
 
 ## Instalação
 
@@ -89,21 +89,21 @@ Importe `tokens.css` e `base.css` e use as variáveis `--hs-*` direto (`color: v
 
 Os sites usam os **semânticos**. Os primitivos (`--hs-sand-100`, `--hs-brown-900`...) só dão nome à paleta.
 
-| Token | Utilitário Tailwind | Uso |
-|---|---|---|
-| `--hs-color-bg` | `page` | fundo da página |
-| `--hs-color-surface` | `surface` | cartões e blocos |
-| `--hs-color-text` | `ink` | texto principal |
-| `--hs-color-text-muted` | `muted` | texto secundário |
-| `--hs-color-border` | `rule` | filetes; hover de botão neutro |
-| `--hs-color-cta` / `-cta-hover` | `accent` / `accent-hover` | **só** o botão de ação principal |
-| `--hs-color-on-cta` | `on-accent` | texto no botão de ação |
-| `--hs-color-focus` | (base.css) | anel de foco |
-| `--hs-font-display` / `--hs-font-text` | `font-display` / `font-sans` | títulos / texto (criadas pela API de fontes) |
-| `--hs-radius-tip`, `-item`, `-bubble`, `-card`, `-panel` | `rounded-tip`, `-item`, `-bubble`, `-card`, `-panel` | 6, 22, 26, 28 e 32 px |
-| `--hs-text-body`, `--hs-leading-body` | (base.css) | 18 px, 1,65 |
-| `--hs-font-weight-heading`, `--hs-tracking-heading` | (base.css) | 600, -0.02em |
-| `--hs-focus-width`, `--hs-focus-offset` | (base.css) | 3 px, 3 px |
+| Token                                                    | Utilitário Tailwind                                  | Uso                                          |
+| -------------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------- |
+| `--hs-color-bg`                                          | `page`                                               | fundo da página                              |
+| `--hs-color-surface`                                     | `surface`                                            | cartões e blocos                             |
+| `--hs-color-text`                                        | `ink`                                                | texto principal                              |
+| `--hs-color-text-muted`                                  | `muted`                                              | texto secundário                             |
+| `--hs-color-border`                                      | `rule`                                               | filetes; hover de botão neutro               |
+| `--hs-color-cta` / `-cta-hover`                          | `accent` / `accent-hover`                            | **só** o botão de ação principal             |
+| `--hs-color-on-cta`                                      | `on-accent`                                          | texto no botão de ação                       |
+| `--hs-color-focus`                                       | (base.css)                                           | anel de foco                                 |
+| `--hs-font-display` / `--hs-font-text`                   | `font-display` / `font-sans`                         | títulos / texto (criadas pela API de fontes) |
+| `--hs-radius-tip`, `-item`, `-bubble`, `-card`, `-panel` | `rounded-tip`, `-item`, `-bubble`, `-card`, `-panel` | 6, 22, 26, 28 e 32 px                        |
+| `--hs-text-body`, `--hs-leading-body`                    | (base.css)                                           | 18 px, 1,65                                  |
+| `--hs-font-weight-heading`, `--hs-tracking-heading`      | (base.css)                                           | 600, -0.02em                                 |
+| `--hs-focus-width`, `--hs-focus-offset`                  | (base.css)                                           | 3 px, 3 px                                   |
 
 Um site pode mudar um valor só para ele sobrescrevendo o token no próprio CSS (ex.: o linkbio usa `--hs-leading-body: 1.6`). Use com parcimônia: cada exceção é uma divergência da identidade.
 
@@ -113,8 +113,8 @@ Um site pode mudar um valor só para ele sobrescrevendo o token no próprio CSS 
 
 Gera: `charset`, `viewport`, `theme-color` (lido de `--hs-color-bg` em `tokens.css`), os três ícones (com endereço com hash, em `/_astro/`), `og:type`, `og:locale`, `og:site_name`, `twitter:card` e as fontes (`<Font>`).
 
-| Prop | Tipo | Padrão | Efeito |
-|---|---|---|---|
+| Prop          | Tipo      | Padrão  | Efeito                                                                                                                                                                              |
+| ------------- | --------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `preloadText` | `boolean` | `false` | Pré-carrega também a fonte do texto. A dos títulos é sempre pré-carregada. Use em página curta, onde o texto aparece na primeira tela (evita a lista "pular" quando a fonte chega). |
 
 Não gera: título, descrição, canonical, `robots`, `og:title`, `og:description`, `og:url`, `og:image` e JSON-LD. Esses são de cada página.

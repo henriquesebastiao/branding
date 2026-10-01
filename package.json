@@ -5,6 +5,9 @@
   "private": true,
   "license": "SEE LICENSE IN LICENSE",
   "author": "Henrique Sebastião <contato@henriquesebastiao.com>",
+  "scripts": {
+    "format": "npx prettier . --write"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/henriquesebastiao/branding.git"
@@ -45,5 +48,10 @@
     "tailwindcss": {
       "optional": true
     }
+  },
+  "devDependencies": {
+    "prettier": "3.9.9",
+    "prettier-plugin-astro": "1.1.0",
+    "prettier-plugin-tailwindcss": "0.8.1"
   }
 }
