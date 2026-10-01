@@ -1,0 +1,126 @@
+LICENÇA DE USO EXCLUSIVO E PROPRIETÁRIO
+Identidade visual e pacote "@henriquesebastiao/branding"
+
+Copyright (c) 2026 Henrique Sebastião. Todos os direitos reservados.
+
+
+1. TITULARIDADE
+
+1.1. Este repositório, o pacote "@henriquesebastiao/branding" e todo o seu
+conteúdo (doravante, o "Material") são de propriedade exclusiva de Henrique
+Sebastião (doravante, o "Titular"), protegidos pela Lei nº 9.610/1998 (Lei de
+Direitos Autorais), pela Lei nº 9.279/1996 (Lei da Propriedade Industrial), pela
+Lei nº 9.609/1998 (Lei do Software), pelos tratados internacionais de que o
+Brasil é signatário e pelas demais normas aplicáveis.
+
+1.2. Integram o Material, sem limitação:
+  a) a identidade visual de Henrique Sebastião, incluindo a paleta de cores, a
+     combinação tipográfica, a escala de medidas, os raios, o tratamento de foco
+     e o conjunto de decisões de estilo descritas em DESIGN.md;
+  b) os design tokens e as folhas de estilo (tokens.css, base.css, tailwind.css);
+  c) os componentes, scripts, dados e arquivos de configuração (incluindo
+     components/, data/, scripts/ e fonts.mjs);
+  d) o símbolo "H", o favicon e os ícones (assets/favicon.svg, assets/favicon.ico,
+     assets/apple-touch-icon.png);
+  e) a fotografia pessoal do Titular (assets/avatar.jpg), cuja imagem também é
+     protegida como direito da personalidade (art. 5º, X, da Constituição Federal
+     e art. 20 do Código Civil);
+  f) a documentação (README.md, DESIGN.md, CHANGELOG.md, CREDITOS.md).
+
+1.3. O nome "Henrique Sebastião", isoladamente ou combinado com a identidade
+visual, identifica o Titular e não pode ser usado para sugerir autoria,
+vínculo, endosso ou representação.
+
+
+2. USO AUTORIZADO
+
+2.1. O uso do Material é reservado exclusivamente ao Titular, nos sites e
+projetos de sua propriedade ou sob seu controle direto, incluindo, sem
+limitação, henriquesebastiao.com e seus subdomínios.
+
+2.2. Nenhuma licença, direito ou autorização é concedida a terceiros, de forma
+expressa ou implícita, por estoppel ou por qualquer outro meio, exceto pelo
+previsto na cláusula 3.
+
+
+3. PERMISSÃO LIMITADA DE VISUALIZAÇÃO
+
+3.1. Este repositório é público apenas para fins de transparência e
+portfólio. É permitido a qualquer pessoa ler e visualizar o Material na
+plataforma em que ele está hospedado.
+
+3.2. Por estar hospedado no GitHub, o Material está sujeito aos Termos de
+Serviço do GitHub, que permitem aos usuários da plataforma visualizar e criar
+cópias ("forks") do repositório dentro do próprio GitHub. Essa permissão
+decorre exclusivamente dos termos da plataforma, limita-se ao necessário para
+o funcionamento dela e não autoriza qualquer outro uso das cópias assim
+criadas, incluindo os usos vedados na cláusula 4.
+
+
+4. USOS VEDADOS
+
+Sem autorização prévia, expressa e por escrito do Titular, é proibido a
+qualquer pessoa física ou jurídica, no todo ou em parte, com ou sem fins
+lucrativos:
+
+  a) usar, instalar ou incorporar o Material, ou o pacote, em qualquer site,
+     aplicativo, produto, serviço, documento ou peça de comunicação;
+  b) reproduzir, copiar, modificar, adaptar, traduzir ou criar obras derivadas
+     do Material, incluindo identidades visuais que o imitem de forma a causar
+     confusão com a do Titular;
+  c) distribuir, publicar, sublicenciar, vender, alugar, emprestar ou de
+     qualquer forma disponibilizar o Material a terceiros, inclusive em
+     registros de pacotes (como o npm), repositórios espelho ou modelos
+     ("templates");
+  d) usar o nome, a imagem, a fotografia ou o símbolo do Titular para se
+     passar por ele ou para sugerir vínculo, autoria, parceria ou endosso;
+  e) remover, ocultar ou alterar avisos de direitos autorais, de titularidade
+     ou desta licença;
+  f) usar o Material para treinar, ajustar ou avaliar sistemas de
+     inteligência artificial, ou incluí-lo em conjuntos de dados para esse fim.
+
+
+5. COMPONENTES DE TERCEIROS
+
+5.1. Esta licença não se aplica a obras de terceiros referenciadas pelo
+Material, que permanecem sob as licenças de seus respectivos titulares,
+listadas em CREDITOS.md. Em especial, as famílias tipográficas Bricolage
+Grotesque e Atkinson Hyperlegible Next são distribuídas sob a SIL Open Font
+License 1.1 e não são redistribuídas por este pacote: fonts.mjs apenas
+descreve quais famílias e pesos a identidade usa.
+
+5.2. Nada nesta licença restringe direitos que terceiros tenham sobre essas
+obras sob as licenças delas.
+
+
+6. PEDIDOS DE AUTORIZAÇÃO
+
+Pedidos de uso devem ser enviados para contato@henriquesebastiao.com. Qualquer
+autorização somente será válida se concedida por escrito pelo Titular, e se
+limitará ao uso, ao prazo e ao escopo nela expressamente descritos.
+
+
+7. AUSÊNCIA DE GARANTIAS
+
+O Material é disponibilizado "no estado em que se encontra", sem garantias de
+qualquer natureza. Na máxima extensão permitida pela lei, o Titular não
+responde por danos decorrentes de qualquer uso do Material, autorizado ou não.
+
+
+8. VIOLAÇÕES
+
+O uso não autorizado do Material sujeita o infrator às sanções civis e penais
+previstas na legislação aplicável, incluindo a cessação imediata do uso, a
+remoção do conteúdo e a indenização por perdas e danos. A tolerância do
+Titular quanto a qualquer violação não constitui renúncia a seus direitos.
+
+
+9. DISPOSIÇÕES GERAIS
+
+9.1. Esta licença é regida pelas leis da República Federativa do Brasil.
+
+9.2. Se qualquer disposição desta licença for considerada inválida ou
+inexequível, as demais permanecerão em pleno vigor.
+
+9.3. O Titular pode alterar esta licença a qualquer momento. A versão
+aplicável é a que acompanha cada versão publicada do Material.

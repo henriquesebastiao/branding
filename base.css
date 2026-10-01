@@ -1,0 +1,40 @@
+/*
+ * Estilos globais mínimos da identidade. Ficam na camada "base" para que qualquer
+ * utilitário do Tailwind (camada "utilities") vença sem precisar de !important.
+ * Importe depois de @import "tailwindcss" (ou use tailwind.css, que já faz isso).
+ */
+
+@layer base {
+  html {
+    background-color: var(--hs-color-bg);
+    color: var(--hs-color-text);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    font-family: var(--hs-font-text);
+    font-size: var(--hs-text-body);
+    line-height: var(--hs-leading-body);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--hs-font-display);
+    font-weight: var(--hs-font-weight-heading);
+    letter-spacing: var(--hs-tracking-heading);
+  }
+  /* Foco visível: anel na cor do texto, afastado do elemento. */
+  a:focus-visible,
+  summary:focus-visible,
+  button:focus-visible {
+    outline: var(--hs-focus-width) solid var(--hs-color-focus);
+    outline-offset: var(--hs-focus-offset);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}

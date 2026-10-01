@@ -1,0 +1,47 @@
+---
+// EXERCÍCIO: reescrever este componente sem IA (ver README, seção "Componentes").
+// Parte comum do <head> de todos os sites: codificação, viewport, cor do navegador,
+// ícones, Open Graph padrão e fontes. Título, descrição, canonical, imagem de
+// compartilhamento e JSON-LD são de cada página e ficam no site.
+import { Font } from "astro:assets";
+import tokens from "../tokens.css?raw";
+import faviconSvg from "../assets/favicon.svg?url&no-inline";
+import faviconIco from "../assets/favicon.ico?url&no-inline";
+import appleTouchIcon from "../assets/apple-touch-icon.png?url&no-inline";
+import { profile } from "../data/profile";
+
+interface Props {
+  /** Pré-carrega também a fonte do texto (útil em página curta, onde o texto aparece logo). */
+  preloadText?: boolean;
+}
+
+const { preloadText = false } = Astro.props;
+
+// Lê um token de tokens.css (seguindo var(--outro)), para a cor não ser repetida aqui.
+function token(name: string): string {
+  const value = tokens.match(new RegExp(`${name}:\\s*([^;]+);`))?.[1].trim();
+  if (!value) throw new Error(`Token ${name} não encontrado em tokens.css`);
+  const ref = value.match(/^var\((--[\w-]+)\)$/);
+  return ref ? token(ref[1]) : value;
+}
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content={token("--hs-color-bg")} />
+
+<link rel="icon" href={faviconSvg} type="image/svg+xml" />
+<link rel="icon" href={faviconIco} sizes="48x48" />
+<link rel="apple-touch-icon" href={appleTouchIcon} />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content={profile.name} />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- A fonte dos títulos é sempre pré-carregada; os pesos dividem um único arquivo variável. -->
+<Font cssVariable="--hs-font-display" preload={[{ style: "normal" }]} />
+<Font
+  cssVariable="--hs-font-text"
+  preload={preloadText ? [{ style: "normal" }] : undefined}
+/>

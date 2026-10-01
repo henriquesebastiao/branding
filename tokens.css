@@ -1,0 +1,46 @@
+/*
+ * Tokens da identidade visual de Henrique Sebastião.
+ * Fonte única de cores e medidas. Os sites usam só os semânticos (--hs-color-*, --hs-text-*, ...);
+ * os primitivos (paleta crua) existem para dar nome aos valores e não devem aparecer nos sites.
+ * As famílias de fonte ficam em fonts.mjs (a API de fontes do Astro cria --hs-font-display e --hs-font-text).
+ */
+
+:root {
+  /* ─── Primitivos ─────────────────────────────────────────────── */
+  --hs-sand-50: #fcfaf6;
+  --hs-sand-100: #f4eee5;
+  --hs-sand-300: #ddd2c3;
+  --hs-brown-600: #655c52;
+  --hs-brown-900: #2a2520;
+  --hs-green-700: #1b6b46;
+  --hs-green-800: #145236;
+  --hs-white: #ffffff;
+
+  /* ─── Cores (semânticos) ─────────────────────────────────────── */
+  --hs-color-bg: var(--hs-sand-100); /* fundo da página */
+  --hs-color-surface: var(--hs-sand-50); /* cartões e blocos */
+  --hs-color-text: var(--hs-brown-900); /* texto principal e títulos */
+  --hs-color-text-muted: var(--hs-brown-600); /* texto secundário */
+  --hs-color-border: var(--hs-sand-300); /* filetes; também hover de botão neutro */
+  --hs-color-cta: var(--hs-green-700); /* só o botão de ação principal */
+  --hs-color-cta-hover: var(--hs-green-800);
+  --hs-color-on-cta: var(--hs-white); /* texto dentro do botão de ação */
+  --hs-color-focus: var(--hs-brown-900); /* anel de foco */
+
+  /* ─── Tipografia ─────────────────────────────────────────────── */
+  --hs-text-body: 18px;
+  --hs-leading-body: 1.65;
+  --hs-font-weight-heading: 600;
+  --hs-tracking-heading: -0.02em;
+
+  /* ─── Foco ───────────────────────────────────────────────────── */
+  --hs-focus-width: 3px;
+  --hs-focus-offset: 3px;
+
+  /* ─── Raios ──────────────────────────────────────────────────── */
+  --hs-radius-tip: 6px; /* "ponta" do balão */
+  --hs-radius-item: 22px; /* perguntas, links, itens de lista */
+  --hs-radius-bubble: 26px; /* balão de mensagem */
+  --hs-radius-card: 28px; /* cartões e fotos */
+  --hs-radius-panel: 32px; /* blocos grandes (CTA final) */
+}

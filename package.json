@@ -1,0 +1,49 @@
+{
+  "name": "@henriquesebastiao/branding",
+  "version": "0.1.0",
+  "description": "Identidade visual de Henrique Sebastião: tokens, estilos base, fontes, ícones e dados compartilhados pelos sites.",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Henrique Sebastião <contato@henriquesebastiao.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriquesebastiao/branding.git"
+  },
+  "type": "module",
+  "exports": {
+    "./tokens.css": "./tokens.css",
+    "./base.css": "./base.css",
+    "./tailwind.css": "./tailwind.css",
+    "./fonts": {
+      "types": "./fonts.d.mts",
+      "default": "./fonts.mjs"
+    },
+    "./Head.astro": "./components/Head.astro",
+    "./profile": "./data/profile.ts",
+    "./assets/*": "./assets/*",
+    "./scripts/check-local.mjs": "./scripts/check-local.mjs"
+  },
+  "files": [
+    "tokens.css",
+    "base.css",
+    "tailwind.css",
+    "fonts.mjs",
+    "fonts.d.mts",
+    "components/",
+    "data/",
+    "assets/",
+    "scripts/",
+    "DESIGN.md",
+    "CHANGELOG.md",
+    "CREDITOS.md"
+  ],
+  "peerDependencies": {
+    "astro": "^7.3.0",
+    "tailwindcss": "^4.3.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  }
+}

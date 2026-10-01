@@ -1,0 +1,35 @@
+/*
+ * Liga a identidade ao Tailwind 4. Use no CSS do site, logo depois do Tailwind:
+ *
+ *   @import "tailwindcss";
+ *   @import "@henriquesebastiao/branding/tailwind.css";
+ *
+ * O tema só aponta para os tokens (inline: o utilitário usa var(--hs-...) direto).
+ * Os nomes dos utilitários (bg-page, text-ink, rounded-card...) são os que os sites já usam.
+ */
+
+@import "./tokens.css";
+@import "./base.css";
+
+@theme inline {
+  --color-page: var(--hs-color-bg);
+  --color-surface: var(--hs-color-surface);
+  --color-ink: var(--hs-color-text);
+  --color-muted: var(--hs-color-text-muted);
+  --color-rule: var(--hs-color-border);
+  --color-accent: var(--hs-color-cta);
+  --color-accent-hover: var(--hs-color-cta-hover);
+  --color-on-accent: var(--hs-color-on-cta);
+
+  --font-display: var(--hs-font-display);
+  --font-sans: var(--hs-font-text);
+
+  --radius-tip: var(--hs-radius-tip);
+  --radius-item: var(--hs-radius-item);
+  --radius-bubble: var(--hs-radius-bubble);
+  --radius-card: var(--hs-radius-card);
+  --radius-panel: var(--hs-radius-panel);
+}
+
+/* O Tailwind ignora node_modules: registra as classes usadas nos componentes deste pacote. */
+@source "./components";
